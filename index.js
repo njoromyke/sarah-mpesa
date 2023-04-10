@@ -52,7 +52,7 @@ app.post(
         PartyA: `254${phone}`,
         PhoneNumber: `254${phone}`,
         PartyB: 174379,
-        CallBackURL: "https://vbed-aid.herokuapp.com/mpesa/callback",
+        CallBackURL: "https://sarah-app.herokuapp.com/mpesa/callback",
         AccountReference: "Auto Repair by Sarah",
         passKey: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
         TransactionType: "CustomerPayBillOnline",
