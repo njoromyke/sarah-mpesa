@@ -52,7 +52,7 @@ app.post(
         PartyA: `254${phone}`,
         PhoneNumber: `254${phone}`,
         PartyB: 174379,
-        CallBackURL: "https://sarah-app.herokuapp.com/mpesa/callback",
+        CallBackURL: "https://sarah-mpesa.herokuapp.com/mpesa/callback",
         AccountReference: "Auto Repair by Sarah",
         passKey: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",
         TransactionType: "CustomerPayBillOnline",
@@ -75,7 +75,7 @@ app.post(
 
 app.post("/mpesa/callback", (req, res) => {
   const { Body } = req.body;
-  console.log(Body);
+  console.log(Body, "body");
 
   if (Body.stkCallback.ResultCode === 0) {
     io.emit("payment-success", "success");
